@@ -1,0 +1,391 @@
+/* ==========================================================
+   Museu Digital da Diversidade Cultural Brasileira — estilos
+   ========================================================== */
+
+:root {
+  --cor-fundo: #14100d;
+  --cor-piso-hall: #e9d9b6;
+  --cor-parede: #3a2a20;
+  --cor-texto: #2c2117;
+  --cor-texto-claro: #f5ecdb;
+  --cor-destaque: #f2a541;
+  --fonte-titulo: "Baloo 2", sans-serif;
+  --fonte-texto: "Nunito Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+  background: var(--cor-fundo);
+  font-family: var(--fonte-texto);
+  color: var(--cor-texto);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+/* ---------- Viewport / Mundo ---------- */
+
+#viewport {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--cor-fundo);
+}
+
+#mundo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      var(--cor-piso-hall) 0px,
+      var(--cor-piso-hall) 38px,
+      #dfc79c 38px,
+      #dfc79c 40px
+    );
+  will-change: transform;
+}
+
+/* ---------- Salas ---------- */
+
+.sala-piso {
+  position: absolute;
+  background: color-mix(in srgb, var(--cor-sala) 16%, var(--cor-piso-hall));
+  border: 3px solid color-mix(in srgb, var(--cor-sala) 55%, #000);
+  border-radius: 6px;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.12);
+}
+
+.sala-placa {
+  position: absolute;
+  transform: translateX(-50%);
+  background: var(--cor-parede);
+  color: var(--cor-texto-claro);
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.parede {
+  position: absolute;
+  background: var(--cor-parede);
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- Stands ---------- */
+
+.stand {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--cor-stand, #8b5e3c);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), inset 0 0 0 3px rgba(255, 255, 255, 0.5);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  z-index: 4;
+}
+
+.stand-icone {
+  font-size: 26px;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
+}
+
+.stand-rotulo {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--fonte-titulo);
+  color: var(--cor-texto-claro);
+  background: rgba(0, 0, 0, 0.55);
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.stand-ativo {
+  transform: scale(1.15);
+  box-shadow: 0 0 0 6px rgba(242, 165, 65, 0.45), 0 4px 14px rgba(0, 0, 0, 0.35);
+  animation: pulsar 1.1s ease-in-out infinite;
+}
+
+@keyframes pulsar {
+  0%, 100% { box-shadow: 0 0 0 6px rgba(242, 165, 65, 0.45), 0 4px 14px rgba(0, 0, 0, 0.35); }
+  50% { box-shadow: 0 0 0 12px rgba(242, 165, 65, 0.15), 0 4px 14px rgba(0, 0, 0, 0.35); }
+}
+
+/* ---------- Jogador ---------- */
+
+#jogador {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jogador-sombra {
+  position: absolute;
+  bottom: -4px;
+  width: 26px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  filter: blur(1px);
+}
+
+.jogador-icone {
+  font-size: 30px;
+  display: inline-block;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.35));
+}
+
+/* ---------- HUD ---------- */
+
+#hud-topo {
+  position: absolute;
+  top: env(safe-area-inset-top, 0px);
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 14px;
+  background: rgba(20, 16, 13, 0.75);
+  color: var(--cor-texto-claro);
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  z-index: 20;
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+}
+
+/* ---------- Botão Explorar ---------- */
+
+#btn-explorar {
+  position: absolute;
+  right: max(24px, env(safe-area-inset-right));
+  bottom: max(40px, env(safe-area-inset-bottom));
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 999px;
+  background: var(--cor-destaque);
+  color: #2c1a05;
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  animation: aparecer 0.2s ease;
+}
+
+#btn-explorar:active {
+  transform: scale(0.95);
+}
+
+.oculto {
+  display: none !important;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(8px) scale(0.9); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ---------- Joystick ---------- */
+
+#joystick-base {
+  position: absolute;
+  left: max(24px, env(safe-area-inset-left));
+  bottom: max(32px, env(safe-area-inset-bottom));
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  z-index: 20;
+  touch-action: none;
+}
+
+#joystick-maniche {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  margin: -24px 0 0 -24px;
+  border-radius: 50%;
+  background: var(--cor-destaque);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* ---------- Modal ---------- */
+
+#modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 8, 6, 0.72);
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(2px);
+}
+
+#modal-card {
+  --cor-categoria: #8b5e3c;
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  max-height: 86vh;
+  overflow-y: auto;
+  background: var(--cor-texto-claro);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  animation: aparecer 0.2s ease;
+}
+
+#modal-fechar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#modal-capa {
+  height: 150px;
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(155deg, var(--cor-categoria), color-mix(in srgb, var(--cor-categoria) 60%, #000));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#modal-icone {
+  font-size: 64px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.35));
+}
+
+#modal-conteudo {
+  padding: 20px 22px 26px;
+}
+
+#modal-categoria {
+  display: inline-block;
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: var(--cor-categoria);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+#modal-titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 26px;
+  margin: 0 0 12px;
+}
+
+#modal-descricao {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0 0 16px;
+}
+
+#modal-curiosidade {
+  background: color-mix(in srgb, var(--cor-categoria) 12%, #fff);
+  border-left: 4px solid var(--cor-categoria);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+#modal-curiosidade strong {
+  display: block;
+  font-family: var(--fonte-titulo);
+  margin-bottom: 4px;
+}
+
+#modal-curiosidade p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ---------- Tela de carregamento ---------- */
+
+#tela-carregamento {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  background: var(--cor-fundo);
+  color: var(--cor-texto-claro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fonte-titulo);
+  text-align: center;
+  padding: 30px;
+}
+
+.tela-carregamento-icone {
+  display: block;
+  font-size: 48px;
+  margin-bottom: 12px;
+  animation: flutuar 1.6s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}

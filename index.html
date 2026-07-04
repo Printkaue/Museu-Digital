@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>Museu Digital da Diversidade Cultural Brasileira</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="app">
+
+    <!-- viewport = "janela" que o visitante enxerga; mundo = mapa completo do museu -->
+    <div id="viewport">
+      <div id="mundo"></div>
+    </div>
+
+    <!-- HUD: nome da sala em que o jogador está -->
+    <div id="hud-topo">
+      <span id="sala-atual">🏛️ Hall Principal</span>
+    </div>
+
+    <!-- botão de interação, aparece quando há um stand próximo -->
+    <button id="btn-explorar" class="oculto">
+      <span>🔍</span> Explorar
+    </button>
+
+    <!-- joystick virtual -->
+    <div id="joystick-base">
+      <div id="joystick-maniche"></div>
+    </div>
+
+    <!-- modal com as informações da manifestação cultural -->
+    <div id="modal-overlay" class="oculto">
+      <div id="modal-card">
+        <button id="modal-fechar" aria-label="Fechar">✕</button>
+
+        <div id="modal-capa">
+          <span id="modal-icone"></span>
+        </div>
+
+        <div id="modal-conteudo">
+          <span id="modal-categoria"></span>
+          <h2 id="modal-titulo"></h2>
+          <p id="modal-descricao"></p>
+
+          <div id="modal-curiosidade">
+            <strong>Você sabia?</strong>
+            <p id="modal-curiosidade-texto"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- tela de carregamento inicial -->
+    <div id="tela-carregamento">
+      <div id="tela-carregamento-conteudo">
+        <span class="tela-carregamento-icone">🏛️</span>
+        <p>Abrindo as portas do museu...</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="stand.js"></script>
+  <script src="joystick.js"></script>
+  <script src="player.js"></script>
+  <script src="map.js"></script>
+  <script src="modal.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

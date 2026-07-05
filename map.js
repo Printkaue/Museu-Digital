@@ -4,7 +4,7 @@
  * e gera automaticamente as paredes de colisão de cada sala.
  */
 
-const WORLD = { width: 1800, height: 1000 };
+const WORLD = { width: 2800, height: 2000 };
 
 const WALL_THICK = 20;
 const DOOR_GAP = 140;
@@ -29,6 +29,9 @@ const ROOMS = [
 
   { id: "artesanato", nome: "Sala de Artesanato", categoria: "Artesanato",
     x: 1220, y: 560, w: 500, h: 400, cor: "#8B5E3C", icone: "🧺", doorSide: "top" },
+
+  { id: "Canganço", nome: "Sala de Canganço", categoria: "Canganço",
+    x: 1780, y: 560, w: 500, h: 400, cor: "#c58f66", icone: "🧺", doorSide: "top" },
 ];
 
 function construirParedesDaSala(sala) {

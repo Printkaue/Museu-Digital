@@ -1,98 +1,116 @@
 [
   {
     "id": 1,
+    "nome": "Um espaço para todas as culturas",
+    "categoria": "Boas-vindas",
+    "descricao": "Este museu não organiza as culturas brasileiras em ordem de importância. Cada sala, cada manifestação e cada povo ocupam o mesmo tamanho de espaço e recebem o mesmo cuidado na apresentação. A ideia é simples: diversidade cultural se respeita mostrando lado a lado, sem hierarquia.",
+    "curiosidade": "Todo o conteúdo do museu vem de um único arquivo de dados. Isso significa que novas culturas podem ser adicionadas a qualquer momento, sempre ocupando o mesmo espaço que as demais.",
+    "icone": "🤝",
+    "posicao": { "x": 180, "y": 500 }
+  },
+  {
+    "id": 2,
+    "nome": "Como explorar o museu",
+    "categoria": "Boas-vindas",
+    "descricao": "Use o joystick no canto inferior esquerdo da tela para caminhar (no computador, também funciona com as setas ou W/A/S/D). Ao se aproximar de um stand, um botão \"Explorar\" aparece — toque nele para ver todas as informações daquela manifestação cultural.",
+    "curiosidade": "Não existe ordem certa para a visita: você pode escolher livremente qual sala visitar primeiro.",
+    "icone": "🕹️",
+    "posicao": { "x": 420, "y": 500 }
+  },
+  {
+    "id": 3,
     "nome": "Festa Junina",
     "categoria": "Festas Populares",
     "descricao": "Celebração típica do interior do Brasil, realizada principalmente em junho. Reúne comidas à base de milho, quadrilha, fogueira e roupas caipiras em homenagem a Santo Antônio, São João e São Pedro.",
     "curiosidade": "Em algumas regiões do Nordeste, a festa é tão importante quanto o Carnaval e movimenta arraiás durante todo o mês de junho.",
-    "posicao": { "x": 190, "y": 190 }
+    "posicao": { "x": 830, "y": 190 }
   },
   {
-    "id": 2,
+    "id": 4,
     "nome": "Carnaval",
     "categoria": "Festas Populares",
     "descricao": "A maior festa popular do Brasil, com desfiles de escolas de samba, blocos de rua e trios elétricos. Cada região tem sua própria forma de comemorar, do samba no Rio ao frevo em Pernambuco.",
     "curiosidade": "O desfile das escolas de samba do Rio de Janeiro acontece em um espaço projetado especialmente para isso: o Sambódromo.",
-    "posicao": { "x": 390, "y": 290 }
+    "posicao": { "x": 1030, "y": 290 }
   },
   {
-    "id": 3,
+    "id": 5,
     "nome": "Samba",
     "categoria": "Música",
     "descricao": "Gênero musical nascido nas comunidades afro-brasileiras do Rio de Janeiro no início do século XX. É marcado pelo ritmo sincopado e por instrumentos como pandeiro, cavaquinho e surdo.",
     "curiosidade": "A palavra 'samba' tem origem africana e já foi associada a diferentes tipos de dança antes de se tornar o gênero musical que conhecemos hoje.",
-    "posicao": { "x": 780, "y": 190 }
+    "posicao": { "x": 1420, "y": 190 }
   },
   {
-    "id": 4,
+    "id": 6,
     "nome": "Bossa Nova",
     "categoria": "Música",
     "descricao": "Estilo musical surgido no fim dos anos 1950 no Rio de Janeiro, misturando o samba com harmonias do jazz. Tem batida suave e letras que valorizam o cotidiano e a paisagem carioca.",
     "curiosidade": "A canção 'Garota de Ipanema' é uma das composições brasileiras mais gravadas em todo o mundo.",
-    "posicao": { "x": 980, "y": 290 }
+    "posicao": { "x": 1620, "y": 290 }
   },
   {
-    "id": 5,
+    "id": 7,
     "nome": "Frevo",
     "categoria": "Danças",
     "descricao": "Dança rápida e acrobática originária de Pernambuco, dançada com uma pequena sombrinha colorida. É tradicionalmente associada ao Carnaval de Recife e Olinda.",
     "curiosidade": "Os passos de frevo têm inspiração na capoeira, o que explica os movimentos ágeis e as quedas no chão durante a dança.",
-    "posicao": { "x": 1370, "y": 190 }
+    "posicao": { "x": 2010, "y": 190 }
   },
   {
-    "id": 6,
+    "id": 8,
     "nome": "Maracatu",
     "categoria": "Danças",
     "descricao": "Manifestação cultural de Pernambuco que mistura música, dança e cortejo, com raízes nas tradições africanas trazidas ao Brasil. Os cortejos são liderados por um rei e uma rainha simbólicos.",
     "curiosidade": "As bonecas em destaque nos cortejos são chamadas de 'calungas' e representam ancestrais e entidades protetoras.",
-    "posicao": { "x": 1570, "y": 290 }
+    "posicao": { "x": 2210, "y": 290 }
   },
   {
-    "id": 7,
+    "id": 9,
     "nome": "Capoeira",
     "categoria": "Cultura Afro-brasileira",
     "descricao": "Arte que combina luta, dança, música e ritual, criada por povos africanos escravizados no Brasil como forma de resistência e expressão cultural. É praticada em roda, ao som do berimbau.",
     "curiosidade": "Em 2014, a roda de capoeira foi reconhecida pela UNESCO como Patrimônio Cultural Imaterial da Humanidade.",
-    "posicao": { "x": 190, "y": 710 }
+    "posicao": { "x": 830, "y": 710 }
   },
   {
-    "id": 8,
+    "id": 10,
     "nome": "Congado",
     "categoria": "Cultura Afro-brasileira",
     "descricao": "Festa de devoção afro-católica encontrada principalmente em Minas Gerais, que une cortejos, ternos de congo, tambores e cantos em celebração a Nossa Senhora do Rosário.",
     "curiosidade": "Cada 'terno' de congada tem seu próprio uniforme, seus próprios instrumentos e sua própria forma de tocar e cantar.",
-    "posicao": { "x": 390, "y": 810 }
+    "posicao": { "x": 1030, "y": 810 }
   },
   {
-    "id": 9,
+    "id": 11,
     "nome": "Grafismo Indígena",
     "categoria": "Povos Originários",
     "descricao": "Pinturas corporais e desenhos geométricos usados por diversos povos indígenas para representar identidade, pertencimento a um grupo e conexão com a natureza.",
     "curiosidade": "Cada povo indígena possui padrões e significados próprios para seus grafismos, transmitidos de geração em geração.",
-    "posicao": { "x": 780, "y": 710 }
+    "posicao": { "x": 1420, "y": 710 }
   },
   {
-    "id": 10,
+    "id": 12,
     "nome": "Cerâmica Marajoara",
     "categoria": "Povos Originários",
     "descricao": "Tradição ceramista da Ilha de Marajó (PA), reconhecida por seus desenhos geométricos elaborados, herdada de povos que habitaram a região antes da chegada dos europeus.",
     "curiosidade": "Peças marajoaras com mais de mil anos já foram encontradas em escavações arqueológicas na região amazônica.",
-    "posicao": { "x": 980, "y": 810 }
+    "posicao": { "x": 1620, "y": 810 }
   },
   {
-    "id": 11,
+    "id": 13,
     "nome": "Renda de Bilros",
     "categoria": "Artesanato",
     "descricao": "Técnica de tecelagem manual trazida por colonizadores portugueses e adaptada pelas comunidades litorâneas do Nordeste, feita com o entrelaçamento de fios em pequenos bastões de madeira chamados bilros.",
     "curiosidade": "Também é chamada de 'renda de almofada', pois as rendeiras trabalham apoiando os bilros sobre uma almofada cilíndrica.",
-    "posicao": { "x": 1370, "y": 710 }
+    "posicao": { "x": 2010, "y": 710 }
   },
   {
-    "id": 12,
+    "id": 14,
     "nome": "Cordel",
     "categoria": "Artesanato",
     "descricao": "Literatura popular impressa em pequenos folhetos, tradicionalmente pendurados em cordões para venda. Narra histórias em versos rimados, muitas vezes ilustradas com xilogravuras.",
     "curiosidade": "O nome 'cordel' vem justamente da forma como os folhetos eram expostos: pendurados em barbantes ou cordas.",
-    "posicao": { "x": 1570, "y": 810 }
+    "posicao": { "x": 2210, "y": 810 }
   }
 ]

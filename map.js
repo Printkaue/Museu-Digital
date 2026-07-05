@@ -4,40 +4,44 @@
  * e gera automaticamente as paredes de colisão de cada sala.
  */
 
-const WORLD = { width: 2800, height: 2000 };
+// O mundo foi alargado para caber o Lobby de Boas-vindas à esquerda das
+// salas temáticas (por isso todas elas foram deslocadas em +640 no eixo x).
+const WORLD = { width: 2440, height: 1000 };
 
 const WALL_THICK = 20;
 const DOOR_GAP = 140;
 
 // Cada sala tem uma porta voltada para o Hall Principal (o corredor central).
-// doorSide indica em qual parede da sala fica essa porta.
+// doorSide indica em qual parede da sala fica essa porta: "top", "bottom",
+// "left" ou "right".
 const ROOMS = [
+  { id: "lobby", nome: "Lobby de Boas-vindas", categoria: "Boas-vindas",
+    x: 40, y: 320, w: 560, h: 360, cor: "#C9A227", icone: "🤝", doorSide: "right" },
+
   { id: "festas", nome: "Sala de Festas Populares", categoria: "Festas Populares",
-    x: 40, y: 40, w: 500, h: 400, cor: "#E4572E", icone: "🎉", doorSide: "bottom" },
+    x: 680, y: 40, w: 500, h: 400, cor: "#E4572E", icone: "🎉", doorSide: "bottom" },
 
   { id: "musica", nome: "Sala de Música", categoria: "Música",
-    x: 630, y: 40, w: 500, h: 400, cor: "#F2A541", icone: "🎵", doorSide: "bottom" },
+    x: 1270, y: 40, w: 500, h: 400, cor: "#F2A541", icone: "🎵", doorSide: "bottom" },
 
   { id: "dancas", nome: "Sala de Danças", categoria: "Danças",
-    x: 1220, y: 40, w: 500, h: 400, cor: "#2A9D8F", icone: "💃", doorSide: "bottom" },
+    x: 1860, y: 40, w: 500, h: 400, cor: "#2A9D8F", icone: "💃", doorSide: "bottom" },
 
   { id: "afro", nome: "Sala de Cultura Afro-brasileira", categoria: "Cultura Afro-brasileira",
-    x: 40, y: 560, w: 500, h: 400, cor: "#BC4749", icone: "🥁", doorSide: "top" },
+    x: 680, y: 560, w: 500, h: 400, cor: "#BC4749", icone: "🥁", doorSide: "top" },
 
   { id: "originarios", nome: "Sala dos Povos Originários", categoria: "Povos Originários",
-    x: 630, y: 560, w: 500, h: 400, cor: "#386641", icone: "🪶", doorSide: "top" },
+    x: 1270, y: 560, w: 500, h: 400, cor: "#386641", icone: "🪶", doorSide: "top" },
 
   { id: "artesanato", nome: "Sala de Artesanato", categoria: "Artesanato",
-    x: 1220, y: 560, w: 500, h: 400, cor: "#8B5E3C", icone: "🧺", doorSide: "top" },
-
-  { id: "Canganço", nome: "Sala de Canganço", categoria: "Canganço",
-    x: 1780, y: 560, w: 500, h: 400, cor: "#c58f66", icone: "🧺", doorSide: "top" },
+    x: 1860, y: 560, w: 500, h: 400, cor: "#8B5E3C", icone: "🧺", doorSide: "top" },
 ];
 
 function construirParedesDaSala(sala) {
   const { x, y, w, h, doorSide } = sala;
   const paredes = [];
   const meioX = x + w / 2;
+  const meioY = y + h / 2;
 
   // parede de cima
   if (doorSide === "top") {
@@ -58,9 +62,24 @@ function construirParedesDaSala(sala) {
     paredes.push({ x: x, y: yBaixo, w: w, h: WALL_THICK });
   }
 
-  // parede esquerda e direita (sem porta)
-  paredes.push({ x: x, y: y, w: WALL_THICK, h: h });
-  paredes.push({ x: x + w - WALL_THICK, y: y, w: WALL_THICK, h: h });
+  // parede esquerda
+  if (doorSide === "left") {
+    const inicioVao = meioY - DOOR_GAP / 2;
+    paredes.push({ x: x, y: y, w: WALL_THICK, h: inicioVao - y });
+    paredes.push({ x: x, y: inicioVao + DOOR_GAP, w: WALL_THICK, h: y + h - (inicioVao + DOOR_GAP) });
+  } else {
+    paredes.push({ x: x, y: y, w: WALL_THICK, h: h });
+  }
+
+  // parede direita
+  const xDireita = x + w - WALL_THICK;
+  if (doorSide === "right") {
+    const inicioVao = meioY - DOOR_GAP / 2;
+    paredes.push({ x: xDireita, y: y, w: WALL_THICK, h: inicioVao - y });
+    paredes.push({ x: xDireita, y: inicioVao + DOOR_GAP, w: WALL_THICK, h: y + h - (inicioVao + DOOR_GAP) });
+  } else {
+    paredes.push({ x: xDireita, y: y, w: WALL_THICK, h: h });
+  }
 
   return paredes;
 }

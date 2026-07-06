@@ -242,7 +242,7 @@ html, body {
   left: 50%;
   width: 48px;
   height: 48px;
-  margin: -24px 0 0 -24px;
+
   border-radius: 50%;
   background: var(--cor-destaque);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);

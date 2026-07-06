@@ -112,5 +112,85 @@
     "descricao": "Literatura popular impressa em pequenos folhetos, tradicionalmente pendurados em cordões para venda. Narra histórias em versos rimados, muitas vezes ilustradas com xilogravuras.",
     "curiosidade": "O nome 'cordel' vem justamente da forma como os folhetos eram expostos: pendurados em barbantes ou cordas.",
     "posicao": { "x": 2210, "y": 810 }
-  }
+  },
+    {
+    "id": 15,
+    "nome": "Brasil Pré-Cabralino",
+    "categoria": "brasil historia",
+    "descricao": "O Brasil Pré-Cabralino é o período anterior à chegada de Pedro Álvares Cabral, em 1500. Nessa época, o território era habitado por milhões de indígenas de diferentes povos, com culturas, línguas e costumes próprios. Eles viviam da caça, pesca, coleta e agricultura, cultivando principalmente mandioca e milho. Não existia um país chamado Brasil, mas diversas comunidades indígenas independentes espalhadas pelo território.",
+    "curiosidade": "Estima-se que existiam mais de 1.000 povos indígenas vivendo no território brasileiro antes de 1500, falando centenas de línguas diferentes.",
+    "posicao": { "x": 100, "y": 1430 }
+  },
+      {
+    "id": 16,
+    "nome": "Descobrimento do Brasil",
+    "categoria": "brasil historia",
+    "descricao": "ocorreu em 22 de abril de 1500, quando a expedição portuguesa comandada por Pedro Álvares Cabral chegou ao litoral do atual estado da Bahia. Os portugueses estavam a caminho das Índias, mas acabaram chegando ao território brasileiro. Após a chegada, os portugueses fizeram contato com os povos indígenas e realizaram a primeira missa. Esse acontecimento marcou o início da colonização portuguesa no Brasil.",
+    "curiosidade": "Quando chegaram, os portugueses deram ao território o nome de Ilha de Vera Cruz. Pouco tempo depois, o nome foi alterado para Terra de Santa Cruz e, mais tarde, passou a se chamar Brasil, por causa da exploração do pau-brasil.",
+    "posicao": { "x": 240, "y": 1430 }
+      },
+            {
+    "id": 17,
+    "nome": "Brasil Colonial",
+    "categoria": "brasil historia",
+    "descricao": "O Brasil Colonial (1500–1822) foi o período em que o Brasil foi governado por Portugal. No início, a principal atividade econômica foi a extração do pau-brasil. Depois, a produção de açúcar tornou-se a principal fonte de riqueza da colônia, utilizando principalmente a mão de obra de pessoas escravizadas trazidas da África. No século XVIII, a descoberta de ouro e diamantes impulsionou o crescimento de regiões como Minas Gerais. Nesse período também foram fundadas cidades, construídas igrejas e fortalezas, e o território brasileiro foi ampliado Ao mesmo tempo, ocorreram conflitos com povos indígenas e surgiram movimentos que defendiam a independência da colônia. O Brasil permaneceu como colônia até 1822, quando declarou sua independência.",
+    "curiosidade": "Em 1808, a família real portuguesa, liderada por Dom João VI, veio para o Brasil fugindo das invasões de Napoleão Bonaparte. Foi a única vez em que uma colônia se tornou a sede de um reino europeu.",
+    "posicao": { "x": 365, "y": 1430 }
+      },
+                {
+    "id": 18,
+    "nome": "Brasil Império",
+    "categoria": "brasil historia",
+    "descricao": "O Brasil Império (1822–1889) começou com a independência do Brasil, proclamada por Dom Pedro I em 7 de setembro de 1822, e terminou com a Proclamação da República, em 1889. Durante esse período, o Brasil foi governado por dois imperadores: Dom Pedro I e Dom Pedro II. A economia era baseada principalmente na produção de café, que se tornou o principal produto de exportação. Também houve crescimento das cidades, construção de ferrovias e início da industrialização. Em 1888, foi assinada a Lei Áurea, que aboliu oficialmente a escravidão no país. O período imperial chegou ao fim em 15 de novembro de 1889, quando ocorreu a Proclamação da República, encerrando a monarquia e iniciando o período republicano.",
+    "curiosidade": "Dom Pedro II governou o Brasil por 49 anos, sendo o imperador que permaneceu mais tempo no poder na história do país.",
+    "posicao": { "x": 460, "y": 1430 }
+      },
+       {
+    "id": 19,
+    "nome": "Primeira República",
+    "categoria": "brasil historia",
+    "descricao": "Primeira República (1889–1930), também chamada de República Oligárquica, começou com a Proclamação da República em 1889 e terminou com a Revolução de 1930. Nesse período, o Brasil foi governado por presidentes civis e militares, mas o poder político ficava concentrado nas elites dos estados, principalmente São Paulo e Minas Gerais — o que ficou conhecido como a política do “café com leite”, por causa da economia baseada no café e na produção leiteira. A economia continuou dependente da exportação de café, enquanto o país começou a se industrializar lentamente. Também ocorreram revoltas populares e conflitos, como a Guerra de Canudos e a Revolta da Vacina. O período terminou em 1930, quando Getúlio Vargas chegou ao poder após uma revolução que derrubou a ordem política da época.",
+    "curiosidade": "Apesar de ser chamada de “república”, o voto não era secreto no início, o que facilitava o controle das eleições pelas elites locais.",
+    "posicao": { "x": 570, "y": 1430 }
+      },
+            {
+    "id": 20,
+    "nome": "Era Vargas",
+    "categoria": "brasil historia",
+    "descricao":"A Era Vargas (1930–1945 e 1951–1954) foi o período em que Getúlio Vargas teve grande influência na política brasileira, governando em dois momentos diferentes. No primeiro período (1930–1945), ele chegou ao poder após a Revolução de 1930 e governou inicialmente de forma provisória. Em 1937, instaurou o Estado Novo, uma ditadura que concentrou poderes no governo federal, com censura e controle político. Apesar disso, também foi nessa fase que surgiram importantes leis trabalhistas, como a criação da CLT (Consolidação das Leis do Trabalho), que garantiu direitos aos trabalhadores. No segundo período (1951–1954), Vargas voltou ao poder por meio de eleições democráticas. Seu governo foi marcado por forte nacionalismo e desenvolvimento econômico, com destaque para a criação da Petrobras. Porém, enfrentou grande crise política, o que levou ao seu suicídio em 1954.",
+    "curiosidade": "Getúlio Vargas ficou conhecido como o “Pai dos Pobres” por causa das leis trabalhistas que beneficiaram os trabalhadores urbanos.",
+    "posicao": { "x": 670, "y": 1430 }
+      },
+             {
+    "id": 21,
+    "nome": "Ditadura Militar",
+    "categoria": "brasil historia",
+    "descricao":"A Ditadura Militar (1964–1985) foi o período em que o Brasil foi governado por militares após o golpe de 1964, que derrubou o presidente João Goulart. Nesse sistema, o poder ficou concentrado nas Forças Armadas, e não havia eleições diretas para presidente. Durante esse período, houve censura à imprensa, perseguição a opositores políticos, prisões e restrições às liberdades civis. Ao mesmo tempo, o governo investiu em grandes obras de infraestrutura e registrou crescimento econômico em alguns momentos, principalmente no chamado “milagre econômico”. A partir do final dos anos 1970, o regime começou a enfraquecer, com o avanço das mobilizações sociais e a pressão pela redemocratização. O processo terminou em 1985, quando o país voltou a ter um presidente civil, marcando o fim da ditadura.",
+    "curiosidade": "Nesse período foram criados os Atos Institucionais, sendo o mais rígido o AI-5, que deu poderes extremos ao governo, permitindo fechar o Congresso e aumentar a repressão.",
+    "posicao": { "x": 770, "y": 1430 }
+      },
+                 {
+    "id": 21,
+    "nome": "Nova República",
+    "categoria": "brasil historia",
+    "descricao":"A Nova República (1985–atualmente) é o período da história do Brasil que começou com o fim da Ditadura Militar, em 1985, marcando a redemocratização do país. Ela se iniciou após a eleição indireta de Tancredo Neves (que faleceu antes de assumir) e a posse de José Sarney. Em 1988, foi promulgada a Constituição Federal, conhecida como “Constituição Cidadã”, que garantiu direitos civis, políticos e sociais. Nesse período, o Brasil passou por avanços democráticos, crises econômicas e planos para controlar a inflação, como o Plano Real, além da alternância de presidentes eleitos pelo voto direto. Também houve maior participação popular, liberdade de imprensa e fortalecimento das instituições.",
+    "curiosidade": "A Constituição de 1988 é considerada uma das mais completas da história do Brasil por ampliar direitos e proteger a democracia após o período militar.",
+    "posicao": { "x": 875, "y": 1430 }
+      },
+    {
+  "id": 22,
+  "nome": "Rap Brasileiro",
+  "categoria": "Música",
+  "descricao": "O rap brasileiro surgiu nas periferias urbanas como uma forma de expressão artística e crítica social. Suas letras abordam temas como desigualdade, racismo, violência, preconceito e a realidade vivida por milhões de pessoas nas comunidades. Além do entretenimento, o rap também funciona como uma ferramenta de conscientização e valorização da identidade cultural.",
+  "curiosidade": "Grupos como Racionais MC's e artistas como Sabotage ajudaram a transformar o rap brasileiro em uma das principais formas de crônica social do país.",
+  "posicao": { "x": 1520, "y": 120 }
+},
+{
+  "id": 23,
+  "nome": "Hip Hop",
+  "categoria": "Música",
+  "descricao": "O Hip Hop é um movimento cultural que reúne música, dança, arte e expressão social. No Brasil, ganhou força a partir dos anos 1980 e tornou-se um importante espaço de valorização da cultura das periferias. Além do rap, o movimento engloba elementos como o break dance, o grafite e o DJ, incentivando criatividade, respeito e participação da comunidade.",
+  "curiosidade": "No Brasil, o Hip Hop teve forte crescimento em cidades como São Paulo, onde batalhas de rima e apresentações em espaços públicos ajudaram a popularizar o movimento entre os jovens.",
+  "posicao": { "x": 1520, "y": 250  }
+}
 ]

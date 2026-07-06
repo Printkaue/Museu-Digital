@@ -13,8 +13,6 @@ function calcularMundo(rooms, margem = 40) {
   };
 }
 
-
-
 const WALL_THICK = 20;
 const DOOR_GAP = 140;
 
@@ -46,6 +44,8 @@ const ROOMS = [
     id: "galeria", nome: "Galeria de Arte", categoria: "Galeria", x: 2520, y: 200, w: 800, h: 600, cor: "#DDD7C8", icone: "🖼️",
     doorSide: "left"
   },
+  { id: "Brasil", nome: "Brasil Historia", categoria: "Brasil Historia",
+    x: 40, y: 1100, w: 1140, h: 400, cor: "#8B5E3C", icone: "00", doorSide: "top" },
 ];
 
 //cria o mundo com tamanho automatico

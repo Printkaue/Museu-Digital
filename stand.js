@@ -19,8 +19,8 @@ constructor(data) {
     this.x = data.posicao.x;
     this.y = data.posicao.y;
     this.tamanho = 60;
-
-    this.icone = data.icone || "🏺";
+    
+    this.icone = data.icone || (data.tipo === "objeto" ? "🖼️" : "🏺");
     this.cor = "#8B5E3C";
 
     this.el = null;

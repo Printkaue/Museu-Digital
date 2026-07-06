@@ -335,6 +335,11 @@ html, body {
   font-family: var(--fonte-titulo);
   font-size: 26px;
   margin: 0 0 12px;
+
+  text-shadow:
+    0 0 4px rgba(0,0,0,.9),
+    0 2px 8px rgba(0,0,0,.8),
+    0 0 15px rgba(0,0,0,.6);
 }
 
 #modal-descricao {
@@ -361,6 +366,169 @@ html, body {
   margin: 0;
   line-height: 1.45;
 }
+
+/*QUADROS E GALERIA*/
+.quadro{
+
+    position:absolute;
+
+    width:130px;
+    height:100px;
+
+    padding:6px;
+
+    background:#6b4d2e;
+
+    border:
+
+        6px solid #b7893c;
+
+    border-radius:6px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.35),
+        inset 0 0 8px rgba(255,255,255,.15);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.galeria-tapete{
+
+    position:absolute;
+
+    background:linear-gradient(
+        90deg,
+        #6e0000,
+        #c11414,
+        #6e0000
+    );
+
+    border-radius:20px;
+
+    box-shadow:
+        inset 0 0 20px rgba(255,255,255,.15),
+        0 0 15px rgba(0,0,0,.3);
+
+}
+
+.quadro{
+
+    position:absolute;
+
+    width:130px;
+    height:95px;
+
+    background:#6b4726;
+
+    border:8px solid #caa04a;
+
+    border-radius:6px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,.35);
+
+}
+
+.quadro img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border:2px solid white;
+
+}
+
+.quadro-luz{
+
+    position:absolute;
+
+    top:-20px;
+
+    width:70px;
+    height:25px;
+
+    border-radius:50%;
+
+    background:white;
+
+    opacity:.18;
+
+    filter:blur(10px);
+
+}
+
+.quadro-placa{
+
+    position:absolute;
+
+    bottom:-28px;
+
+    background:white;
+
+    padding:3px 8px;
+
+    border-radius:5px;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    box-shadow:0 2px 4px rgba(0,0,0,.25);
+
+}
+
+.quadro img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border:2px solid #efe3c5;
+
+    background:white;
+
+    pointer-events:none;
+}
+
+.quadro{
+
+    position:absolute;
+
+    width:120px;
+    height:90px;
+
+}
+
+.quadro img{
+
+    position:absolute;
+
+    inset:8px;
+
+    width:calc(100% - 16px);
+    height:calc(100% - 16px);
+
+}
+
+.quadro-placa{
+
+    position:absolute;
+
+    top:105%;
+
+}
+
 
 /* ---------- Tela de carregamento ---------- */
 

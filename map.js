@@ -6,7 +6,10 @@
 
 // O mundo foi alargado para caber o Lobby de Boas-vindas à esquerda das
 // salas temáticas (por isso todas elas foram deslocadas em +640 no eixo x).
-const WORLD = { width: 2440, height: 1000 };
+const WORLD = {
+    width: 3400,
+    height: 1000
+};
 
 const WALL_THICK = 20;
 const DOOR_GAP = 140;
@@ -35,6 +38,10 @@ const ROOMS = [
 
   { id: "artesanato", nome: "Sala de Artesanato", categoria: "Artesanato",
     x: 1860, y: 560, w: 500, h: 400, cor: "#8B5E3C", icone: "🧺", doorSide: "top" },
+  {
+    id: "galeria", nome: "Galeria de Arte", categoria: "Galeria", x: 2520, y: 200, w: 800, h: 600, cor: "#DDD7C8", icone: "🖼️",
+    doorSide: "left"
+},
 ];
 
 function construirParedesDaSala(sala) {
@@ -129,6 +136,9 @@ function renderizarMapa(container) {
     el.style.height = p.h + "px";
     container.appendChild(el);
   });
+
+  //quadros
+  renderizarGaleria(container);
 }
 
 function encontrarSalaAtual(x, y) {

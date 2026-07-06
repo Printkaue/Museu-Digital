@@ -3,19 +3,17 @@
    ========================================================== */
 
 :root {
-  --cor-fundo: #14100d;
-  --cor-piso-hall: #e9d9b6;
-  --cor-parede: #3a2a20;
-  --cor-texto: #2c2117;
-  --cor-texto-claro: #f5ecdb;
-  --cor-destaque: #f2a541;
-  --fonte-titulo: "Baloo 2", sans-serif;
-  --fonte-texto: "Nunito Sans", sans-serif;
+  --cor-fundo:        #14100d;
+  --cor-piso-hall:    #e9d9b6;
+  --cor-parede:       #3a2a20;
+  --cor-texto:        #2c2117;
+  --cor-texto-claro:  #f5ecdb;
+  --cor-destaque:     #f2a541;
+  --fonte-titulo:     "Baloo 2", sans-serif;
+  --fonte-texto:      "Nunito Sans", sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html, body {
   margin: 0;
@@ -51,14 +49,13 @@ html, body {
   position: absolute;
   top: 0;
   left: 0;
-  background:
-    repeating-linear-gradient(
-      90deg,
-      var(--cor-piso-hall) 0px,
-      var(--cor-piso-hall) 38px,
-      #dfc79c 38px,
-      #dfc79c 40px
-    );
+  background: repeating-linear-gradient(
+    90deg,
+    var(--cor-piso-hall) 0px,
+    var(--cor-piso-hall) 38px,
+    #dfc79c 38px,
+    #dfc79c 40px
+  );
   will-change: transform;
 }
 
@@ -141,7 +138,7 @@ html, body {
 
 @keyframes pulsar {
   0%, 100% { box-shadow: 0 0 0 6px rgba(242, 165, 65, 0.45), 0 4px 14px rgba(0, 0, 0, 0.35); }
-  50% { box-shadow: 0 0 0 12px rgba(242, 165, 65, 0.15), 0 4px 14px rgba(0, 0, 0, 0.35); }
+  50%       { box-shadow: 0 0 0 12px rgba(242, 165, 65, 0.15), 0 4px 14px rgba(0, 0, 0, 0.35); }
 }
 
 /* ---------- Jogador ---------- */
@@ -215,17 +212,13 @@ html, body {
   animation: aparecer 0.2s ease;
 }
 
-#btn-explorar:active {
-  transform: scale(0.95);
-}
+#btn-explorar:active { transform: scale(0.95); }
 
-.oculto {
-  display: none !important;
-}
+.oculto { display: none !important; }
 
 @keyframes aparecer {
   from { opacity: 0; transform: translateY(8px) scale(0.9); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 /* ---------- Joystick ---------- */
@@ -335,11 +328,10 @@ html, body {
   font-family: var(--fonte-titulo);
   font-size: 26px;
   margin: 0 0 12px;
-
   text-shadow:
-    0 0 4px rgba(0,0,0,.9),
-    0 2px 8px rgba(0,0,0,.8),
-    0 0 15px rgba(0,0,0,.6);
+    0 0 4px rgba(0, 0, 0, 0.9),
+    0 2px 8px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(0, 0, 0, 0.6);
 }
 
 #modal-descricao {
@@ -367,168 +359,60 @@ html, body {
   line-height: 1.45;
 }
 
-/*QUADROS E GALERIA*/
-.quadro{
+/* ---------- Galeria / Quadros ---------- */
 
-    position:absolute;
-
-    width:130px;
-    height:100px;
-
-    padding:6px;
-
-    background:#6b4d2e;
-
-    border:
-
-        6px solid #b7893c;
-
-    border-radius:6px;
-
-    box-shadow:
-        0 4px 12px rgba(0,0,0,.35),
-        inset 0 0 8px rgba(255,255,255,.15);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.galeria-tapete {
+  position: absolute;
+  background: linear-gradient(90deg, #6e0000, #c11414, #6e0000);
+  border-radius: 20px;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.15), 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-.galeria-tapete{
-
-    position:absolute;
-
-    background:linear-gradient(
-        90deg,
-        #6e0000,
-        #c11414,
-        #6e0000
-    );
-
-    border-radius:20px;
-
-    box-shadow:
-        inset 0 0 20px rgba(255,255,255,.15),
-        0 0 15px rgba(0,0,0,.3);
-
+.quadro {
+  position: absolute;
+  width: 120px;
+  height: 90px;
+  background: #6b4726;
+  border: 8px solid #caa04a;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.35);
 }
 
-.quadro{
-
-    position:absolute;
-
-    width:130px;
-    height:95px;
-
-    background:#6b4726;
-
-    border:8px solid #caa04a;
-
-    border-radius:6px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    box-shadow:
-        0 5px 12px rgba(0,0,0,.35);
-
+.quadro img {
+  position: absolute;
+  inset: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  object-fit: cover;
+  border: 2px solid #efe3c5;
+  background: white;
+  pointer-events: none;
 }
 
-.quadro img{
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-
-    border:2px solid white;
-
+.quadro-luz {
+  position: absolute;
+  top: -20px;
+  width: 70px;
+  height: 25px;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.18;
+  filter: blur(10px);
 }
 
-.quadro-luz{
-
-    position:absolute;
-
-    top:-20px;
-
-    width:70px;
-    height:25px;
-
-    border-radius:50%;
-
-    background:white;
-
-    opacity:.18;
-
-    filter:blur(10px);
-
+.quadro-placa {
+  position: absolute;
+  top: 105%;
+  background: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
-
-.quadro-placa{
-
-    position:absolute;
-
-    bottom:-28px;
-
-    background:white;
-
-    padding:3px 8px;
-
-    border-radius:5px;
-
-    font-size:12px;
-
-    font-weight:bold;
-
-    box-shadow:0 2px 4px rgba(0,0,0,.25);
-
-}
-
-.quadro img{
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-
-    border:2px solid #efe3c5;
-
-    background:white;
-
-    pointer-events:none;
-}
-
-.quadro{
-
-    position:absolute;
-
-    width:120px;
-    height:90px;
-
-}
-
-.quadro img{
-
-    position:absolute;
-
-    inset:8px;
-
-    width:calc(100% - 16px);
-    height:calc(100% - 16px);
-
-}
-
-.quadro-placa{
-
-    position:absolute;
-
-    top:105%;
-
-}
-
 
 /* ---------- Tela de carregamento ---------- */
 
@@ -555,5 +439,5 @@ html, body {
 
 @keyframes flutuar {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  50%       { transform: translateY(-8px); }
 }

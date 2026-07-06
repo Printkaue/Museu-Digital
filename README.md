@@ -32,6 +32,7 @@ Depois acesse `http://localhost:8000` no navegador (ou no celular, na mesma rede
 | `database.json` | **Todo o conteúdo cultural do museu** |
 | `stand.js` | Classe `Stand` (cada manifestação cultural) |
 | `player.js` | Classe `Player` (o personagem) |
+| `paitinngs.js` | Galeria de  Quadros |
 | `joystick.js` | Classe `Joystick` (controle virtual) |
 | `map.js` | Salas, paredes e colisão do mapa |
 | `modal.js` | Abertura/fechamento do card de informações |

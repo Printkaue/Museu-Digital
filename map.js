@@ -4,12 +4,16 @@
  * e gera automaticamente as paredes de colisão de cada sala.
  */
 
-// O mundo foi alargado para caber o Lobby de Boas-vindas à esquerda das
-// salas temáticas (por isso todas elas foram deslocadas em +640 no eixo x).
-const WORLD = {
-    width: 3400,
-    height: 1000
-};
+function calcularMundo(rooms, margem = 40) {
+  const direita = Math.max(...rooms.map(s => s.x + s.w));
+  const baixo   = Math.max(...rooms.map(s => s.y + s.h));
+  return {
+    width:  direita + margem,
+    height: baixo   + margem
+  };
+}
+
+
 
 const WALL_THICK = 20;
 const DOOR_GAP = 140;
@@ -41,8 +45,12 @@ const ROOMS = [
   {
     id: "galeria", nome: "Galeria de Arte", categoria: "Galeria", x: 2520, y: 200, w: 800, h: 600, cor: "#DDD7C8", icone: "🖼️",
     doorSide: "left"
-},
+  },
 ];
+
+//cria o mundo com tamanho automatico
+const WORLD = calcularMundo(ROOMS);
+
 
 function construirParedesDaSala(sala) {
   const { x, y, w, h, doorSide } = sala;
@@ -104,8 +112,11 @@ const PAREDES = ROOMS.reduce(
 );
 
 function renderizarMapa(container) {
-  container.style.width = WORLD.width + "px";
-  container.style.height = WORLD.height + "px";
+
+  const mundo = calcularMundo(ROOMS); 
+
+  container.style.width = mundo.width + "px";
+  container.style.height = mundo.height + "px";
 
   // piso de cada sala + placa com o nome
   ROOMS.forEach((sala) => {

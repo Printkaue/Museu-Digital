@@ -192,5 +192,13 @@
   "descricao": "O Hip Hop é um movimento cultural que reúne música, dança, arte e expressão social. No Brasil, ganhou força a partir dos anos 1980 e tornou-se um importante espaço de valorização da cultura das periferias. Além do rap, o movimento engloba elementos como o break dance, o grafite e o DJ, incentivando criatividade, respeito e participação da comunidade.",
   "curiosidade": "No Brasil, o Hip Hop teve forte crescimento em cidades como São Paulo, onde batalhas de rima e apresentações em espaços públicos ajudaram a popularizar o movimento entre os jovens.",
   "posicao": { "x": 1520, "y": 250  }
+},
+{
+  "id": 24,
+  "nome": "Carta",
+  "categoria": "brasil historia",
+  "tipo": "objeto",
+  "imagem": "assets/imagem02.jpeg",
+  "posicao": { "x": 875, "y": 1300  }
 }
 ]

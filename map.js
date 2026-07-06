@@ -45,7 +45,7 @@ const ROOMS = [
     doorSide: "left"
   },
   { id: "Brasil", nome: "Brasil Historia", categoria: "Brasil Historia",
-    x: 40, y: 1100, w: 1140, h: 400, cor: "#8B5E3C", icone: "00", doorSide: "top" },
+    x: 40, y: 1100, w: 1140, h: 400, cor: "#8B5E3C", icone: "📜", doorSide: "top" },
 ];
 
 //cria o mundo com tamanho automatico

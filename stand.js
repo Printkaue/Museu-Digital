@@ -5,26 +5,26 @@
  * a si mesmo no mapa. Nenhuma informação fica fixa no HTML.
  */
 class Stand {
-  constructor(data) {
+constructor(data) {
     this.id = data.id;
     this.nome = data.nome;
     this.categoria = data.categoria;
     this.descricao = data.descricao;
     this.curiosidade = data.curiosidade;
+    this.tipo = data.tipo || null;
+
+    this.imagem = data.imagem || null;   // <-- ADICIONE ESTA LINHA
     this.imagens = data.imagens || [];
 
-    // posicao no JSON representa o CENTRO do stand no mundo
     this.x = data.posicao.x;
     this.y = data.posicao.y;
     this.tamanho = 60;
 
-    // preenchidos depois, a partir da sala correspondente (ver map.js)
     this.icone = data.icone || "🏺";
     this.cor = "#8B5E3C";
 
     this.el = null;
-  }
-
+}
   // retângulo de colisão (o personagem não pode atravessar o stand)
   getRect() {
     const metade = this.tamanho / 2;

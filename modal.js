@@ -4,6 +4,12 @@
  * clicado — nada fica fixo no HTML.
  */
 function abrirModal(obj) {
+
+  if (obj.tipo === "objeto") {
+    abrirImagem(obj.imagem);
+    return; 
+  }
+
   const iconeEl = document.getElementById("modal-icone");
   const imgEl = document.getElementById("modal-img");
 
@@ -18,22 +24,30 @@ function abrirModal(obj) {
   if (obj.icone) {
     iconeEl.textContent = obj.icone;
     iconeEl.style.display = "block";
-
     imgEl.style.display = "none";
-  }
-
-
-  else if (obj.imagem) {
+  } else if (obj.imagem) {
     imgEl.src = obj.imagem;
     imgEl.style.display = "block";
-
     iconeEl.style.display = "none";
   }
 
-      document.getElementById("modal-overlay").classList.remove("oculto");
-
+  document.getElementById("modal-overlay").classList.remove("oculto");
 }
 
 function fecharModal() {
     document.getElementById("modal-overlay").classList.add("oculto");
   }
+
+function abrirImagem(src){
+    const overlay = document.getElementById("imagem-overlay");
+    const img = document.getElementById("imagem-full");
+
+    img.src = src;
+    overlay.classList.remove("oculto");
+}
+
+function fecharImagem(){
+    document.getElementById("imagem-overlay").classList.add("oculto");
+}
+
+document.getElementById("imagem-overlay").addEventListener("click", fecharImagem);

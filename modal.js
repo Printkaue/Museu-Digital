@@ -18,6 +18,15 @@ function abrirModal(obj) {
   document.getElementById("modal-descricao").textContent = obj.descricao;
   document.getElementById("modal-curiosidade-texto").textContent = obj.curiosidade;
 
+  const linkEl = document.getElementById("modal-link");
+
+  if (obj.link) {
+      linkEl.href = obj.link;
+      linkEl.classList.remove("oculto");
+      
+  } else {
+      linkEl.classList.add("oculto");
+  }
   const card = document.getElementById("modal-card");
   card.style.setProperty("--cor-categoria", obj.cor || "#b58b2d");
 

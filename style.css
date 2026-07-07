@@ -266,6 +266,25 @@ html, body {
     display: none;
 }
 
+.modal-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 18px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: #8B5E3C;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.modal-link:hover{
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
 #imagem-full{
     max-width: 95%;
     max-height: 95%;

@@ -165,7 +165,7 @@
     });
     stands.forEach((s) => s.render(mundo));
 
-    player = new Player(900, 500);
+    player = new Player(320, 500);
     player.criarElemento(mundo);
 
     joystick = new Joystick(document.getElementById("joystick-base"), document.getElementById("joystick-maniche"));

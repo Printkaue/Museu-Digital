@@ -12,8 +12,9 @@ constructor(data) {
     this.descricao = data.descricao;
     this.curiosidade = data.curiosidade;
     this.tipo = data.tipo || null;
+    this.link = data.link || null;
 
-    this.imagem = data.imagem || null;   // <-- ADICIONE ESTA LINHA
+    this.imagem = data.imagem || null;  
     this.imagens = data.imagens || [];
 
     this.x = data.posicao.x;

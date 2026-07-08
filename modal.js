@@ -34,11 +34,16 @@ function abrirModal(obj) {
     iconeEl.textContent = obj.icone;
     iconeEl.style.display = "block";
     imgEl.style.display = "none";
-  } else if (obj.imagem) {
+    imgEl.style.maxHeight = "";
+  } else if (obj.imagem) {   
+    
     imgEl.src = obj.imagem;
     imgEl.style.display = "block";
     iconeEl.style.display = "none";
-  }
+
+    card.classList.add("modal-com-imagem");
+} 
+ 
 
   document.getElementById("modal-overlay").classList.remove("oculto");
 }

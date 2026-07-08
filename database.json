@@ -371,6 +371,35 @@
   "curiosidade": "Além do tradicional 'passinho', o funk possui diversos subgêneros e hoje é um dos estilos musicais brasileiros mais ouvidos dentro e fora do país.",
   "link": "https://www.gov.br/cultura",
   "posicao": { "x": 2010, "y": 300 }
+},
+{
+  "id": 41,
+  "nome": "Cestaria",
+  "categoria": "Artesanato",
+  "descricao": "A cestaria é uma das formas mais antigas de artesanato do Brasil. Produzida com fibras naturais como cipó, palha e bambu, é utilizada tanto no cotidiano quanto como expressão artística por diversos povos indígenas e comunidades tradicionais.",
+  "curiosidade": "Cada povo desenvolveu técnicas próprias de trançado, criando padrões e formatos únicos.",
+  "link": "https://www.gov.br/iphan/pt-br",
+  "posicao": { "x": 2210, "y": 640 }
+},
+
+{
+  "id": 42,
+  "nome": "Cerâmica",
+  "categoria": "Artesanato",
+  "descricao": "A cerâmica brasileira reúne tradições indígenas, africanas e europeias. Peças utilitárias e decorativas são produzidas manualmente utilizando barro moldado e queimado em fornos.",
+  "curiosidade": "A cerâmica marajoara, produzida na Ilha de Marajó, é considerada uma das mais importantes expressões arqueológicas das Américas.",
+  "link": "https://www.gov.br/iphan/pt-br",
+  "posicao": { "x": 2100, "y": 850 }
+},
+
+{
+  "id": 43,
+  "nome": "Escultura em Madeira",
+  "categoria": "Artesanato",
+  "descricao": "A escultura em madeira é uma tradição presente em diversas regiões brasileiras. Utilizando técnicas de entalhe, artesãos produzem imagens religiosas, animais, utensílios e obras decorativas.",
+  "curiosidade": "Muitas comunidades preservam técnicas transmitidas entre gerações há centenas de anos.",
+  "link": "https://www.gov.br/iphan/pt-br",
+  "posicao": { "x": 2000, "y": 850 }
 }
 
 ]

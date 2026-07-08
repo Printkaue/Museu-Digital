@@ -400,6 +400,35 @@ html, body {
   line-height: 1.45;
 }
 
+#modal-capa {
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(#f8f3e8, #e8d8b8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 150px;   /* altura padrão para ícones */
+}
+
+/* quando tem imagem, a capa cresce com o conteúdo */
+.modal-com-imagem #modal-capa {
+  height: auto;
+  min-height: 200px;
+  max-height: 70vh;
+  padding: 16px;
+}
+
+#modal-img {
+  max-width: 100%;
+  max-height: 60vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 10px solid #caa04a;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  background: white;
+}
+
 /* ---------- Galeria / Quadros ---------- */
 
 .galeria-tapete {
